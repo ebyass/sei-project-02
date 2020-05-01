@@ -7,7 +7,7 @@ import Footer from './Footer'
 class Result extends React.Component {
 	state = {
     stockImages: [
-      'https://media.newyorker.com/photos/5d67f40fa15e8f0009d9a094/2:1/w_2560,h_1280,c_limit/190909_r34891.jpg',
+      'https://www.chicagotribune.com/resizer/3U1sOcVhiya2oB1GGaSO2GfYD8A=/415x508/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/NKTE7ZA6RJAAPNMPH4XN2IRRTA.jpg',
       'https://www.biography.com/.image/t_share/MTU1MTU2MTM5OTc2MTczNTI2/-photo-by-max-mumby-indigo-getty-images-square.jpg',
       'https://cdn.entertainmentdaily.com/2019/07/13105634/coverimages31710293-e1563011827473.jpg',
       'https://www.thesun.co.uk/wp-content/uploads/2020/04/NINTCHDBPICT000577901903-1.jpg',
@@ -97,7 +97,8 @@ class Result extends React.Component {
 			<div className="name-section">
         <h1>Your Lookalike is: <span>{this.state.lookalike}</span></h1>
 				</div>
-					<div className="columns is-one-quarter-desktop is-one-third-tablet is-half-mobile">
+				<div className="column is-centred">
+					<div className="columns is-centered is-one-quarter-desktop is-one-third-tablet is-half-mobile ">
 					<div className="column">
         <figure className="image is-1by1">
           <img src={this.state.userImage} alt={this.state.userImage}/>
@@ -105,10 +106,12 @@ class Result extends React.Component {
 				</div>
 				<div className="column">
         <figure className="image is-1by1">
-					<Spinner />
+					
           <img src={this.state.celebImage} alt={this.state.celebImage} loading="lazy" />
         </figure>
 				</div>
+				</div>
+
 				</div>
         <button className="button is-danger is-fullwidth" onClick={this.handleClick}>Try again</button>
 				<Footer />
