@@ -97,20 +97,19 @@ class Result extends React.Component {
 			<div className="name-section">
         <h1>Your Lookalike is: <span>{this.state.lookalike}</span></h1>
 				</div>
-					<div className="columns">
+					<div className="columns is-one-quarter-desktop is-one-third-tablet is-half-mobile">
 					<div className="column">
         <figure className="image is-1by1">
-          <img src={this.state.userImage} alt={this.state.userImage} />
+          <img src={this.state.userImage} alt={this.state.userImage}/>
         </figure>
 				</div>
 				<div className="column">
         <figure className="image is-1by1">
 					<Spinner />
-          <img src={this.state.celebImage} alt={this.state.celebImage} />
+          <img src={this.state.celebImage} alt={this.state.celebImage} loading="lazy" />
         </figure>
 				</div>
 				</div>
-
         <button className="button is-danger is-fullwidth" onClick={this.handleClick}>Try again</button>
 				<Footer />
 

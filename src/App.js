@@ -5,7 +5,8 @@ import './App.css';
 
 import Home from './Components/Home'
 import Result from './Components/Result'
-
+import Modal from './Components/Modal'
+import Dashboard from './Components/Dashboard'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
 		<Switch>
       <Route exact path="/" component={Home}/>
       <Route path="/result" component={Result}/>
+			<Route path="/modal" component={Modal}/>
+			<Route path="/dashboard" component={Dashboard} />
 		</Switch>
 		
 		</BrowserRouter>
