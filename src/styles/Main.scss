@@ -18,17 +18,24 @@
 	--green-gradient:linear-gradient( -75deg, var(--green) 10%,  var(--blue) 90% );
 
 	background-color: black;
+	max-width: 100%;
 }
 
-
+.container {
+	margin: 0 auto;
+	max-width: 100%;
+}
 
 .header {
 	background-color: black;
-	margin: 20px;
+	line-height: 2.1;
+	max-width: 100%;
+	margin: 0 auto;
+	// margin:0 1em;
 	color: white;
 	font-weight: bold;
 	font-size: 35px;
-	
+	font-family: 'Oswald', sans-serif;
 	height: 85px;
 	text-align: center;
 		span {
@@ -39,14 +46,16 @@
 .Hero {
 	margin-bottom: 10px;
 	height: 350px;
-	
-		background-image: url('https://boostlikes-bc85.kxcdn.com/blog/wp-content/uploads/2013/06/celebrities.jpg');
+		// background: linear-gradient(45deg, red, yellow);
+		background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url('https://boostlikes-bc85.kxcdn.com/blog/wp-content/uploads/2013/06/celebrities.jpg');
+	  // background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 		background-size: contain;
 		background-position: center center;
 		background-repeat: repeat;
 		text-shadow: 1px 1px 1px var(--dark-grey);
+		max-width: 100%;
 		.title {
-			color: var(--orange);
+			color: white
 		}
 
 	}
@@ -63,8 +72,16 @@
 		max-width: 400px;
 	}
 	img {
+		vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    height: auto;
+    max-width: 828px;
 		background-size: contain;
 		background-position: center center;
+		image-rendering: auto;
+		image-rendering: crisp-edges;
+		// image-rendering: pixelated;
 		
 	}
 }

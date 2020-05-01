@@ -101,7 +101,11 @@ class Result extends React.Component {
 					<div className="columns is-centered is-one-quarter-desktop is-one-third-tablet is-half-mobile ">
 					<div className="column">
         <figure className="image is-1by1">
-          <img src={this.state.userImage} alt={this.state.userImage}/>
+					<img 
+					src={this.state.userImage} 
+					
+          
+					alt={this.state.userImage}/>
         </figure>
 				</div>
 				<div className="column">
