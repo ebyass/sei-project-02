@@ -91,7 +91,7 @@ class Result extends React.Component {
     return (
       <>
 			<div className="header">
-				<h1>Your Exhaustive and Exhilarating Celebrity Generator</h1>
+				<h1>Your <span>Exhaustive</span> and <span>Exhilarating</span> Celebrity Generator</h1>
 			</div>
 					<div className="columns">
 					<div className="column">
