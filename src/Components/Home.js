@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import Footer from './Footer'
 
 class Home extends React.Component {
 	
@@ -79,9 +79,8 @@ const { formData } = this.state
 
 <Link to={{ pathname: '/result', state: { userImage: this.state.formData.userImage } }} className="button is-link is-danger is-large is-fullwidth">Go find my celebrity </Link>
 </transition>
-
-
 </div>
+<Footer />
 </div>
 		)
 	

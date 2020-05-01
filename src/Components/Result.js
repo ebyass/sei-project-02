@@ -2,6 +2,7 @@
 import React from 'react'
 import { getImage, getLookalike } from '../lib/api'
 import Spinner from './Spinner'
+import Footer from './Footer'
 
 class Result extends React.Component {
 	state = {
@@ -93,6 +94,9 @@ class Result extends React.Component {
 			<div className="header">
 				<h1>Your <span>Exhaustive</span> and <span>Exhilarating</span> Celebrity Generator</h1>
 			</div>
+			<div className="name-section">
+        <h1>Your Lookalike is: <span>{this.state.lookalike}</span></h1>
+				</div>
 					<div className="columns">
 					<div className="column">
         <figure className="image is-1by1">
@@ -106,10 +110,9 @@ class Result extends React.Component {
         </figure>
 				</div>
 				</div>
-				<div className="section">
-        <h1>Your Lookalike is: <span>{this.state.lookalike}</span></h1>
-				</div>
+
         <button className="button is-danger is-fullwidth" onClick={this.handleClick}>Try again</button>
+				<Footer />
 
       </>
     )

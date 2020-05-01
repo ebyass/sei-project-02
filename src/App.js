@@ -6,6 +6,7 @@ import './App.css';
 import Home from './Components/Home'
 import Result from './Components/Result'
 
+
 function App() {
   return (
 		<BrowserRouter>
@@ -13,7 +14,7 @@ function App() {
       <Route exact path="/" component={Home}/>
       <Route path="/result" component={Result}/>
 		</Switch>
-
+		
 		</BrowserRouter>
 	)
 }
