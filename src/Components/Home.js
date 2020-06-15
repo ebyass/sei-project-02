@@ -17,7 +17,6 @@ const formData = { ...this.state, [event.target.name]: event.target.value}
 const errors = {...this.state.errors, [event.target.name]: '' }
 
 this.setState({ formData, errors })
-console.log(formData)
 	}
 
 	handleSubmit = event => {
@@ -27,7 +26,7 @@ console.log(formData)
 
 	handleClick = () => {
 this.props.history.push('/result')
-console.log('this is the handleClick funtion', this.state.formData)
+// console.log('this is the handleClick funtion', this.state.formData)
 	}
 
 	render() {

@@ -20,12 +20,8 @@ class Result extends React.Component {
     celebImage: ''
   }
   async componentDidMount() {
-    console.log('mouted')
     try {
-      console.log('try successful')
       this.setState({ userImage: this.props.location.state.userImage })
-      console.log(this.props.location.state.userImage)
-      console.log(this.state.userImage)
       this.shufflePictures()
       // this.setState({ lookalike:  })
       this.getCelebName()
@@ -51,10 +47,7 @@ class Result extends React.Component {
 
   getCelebName = async () => {
     try {
-      console.log('get celeb name has ran')
       const res = await getLookalike(this.props.location.state.userImage)
-      console.log(this.state.userImage)
-      console.log('response', res.data)
       this.setState({ lookalike: res.data.result[0].name })
       this.getCelebImage()
       // return res.data.result[0].name
@@ -67,13 +60,10 @@ class Result extends React.Component {
 
   getCelebImage = async () => {
     try {
-      console.log('Get Celeb Ran')
       const celeb = this.state.lookalike
       const res = await getImage(celeb)
-      console.log(res.data.value[0].thumbnailUrl)
+      // console.log(res.data.value[0].thumbnailUrl)
       this.setState({ celebImage: res.data.value[0].thumbnailUrl })
-      console.log('state:', this.state)
-
     } catch (err) {
       console.log(err.response)
     }
@@ -86,7 +76,7 @@ class Result extends React.Component {
   }
 
   render() {
-    console.log('state', this.state)
+    // console.log('state', this.state)
 
     if (!this.state.userImage) return null
     return (

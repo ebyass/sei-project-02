@@ -1,16 +1,13 @@
 import React from 'react';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 import Home from './Components/Home'
 import Result from './Components/Result'
 import Modal from './Components/Modal'
 import Dashboard from './Components/Dashboard'
-
-console.log(process.env.REACT_APP_MY_SECRET_KEY);
-console.log(process.env.REACT_APP_MY_SECOND_KEY);
 
 function App() {
   return (

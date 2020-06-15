@@ -14,7 +14,8 @@ export const getLookalike = (imgUrl) => {
     'headers': {
       'content-type': 'application/x-www-form-urlencoded',
       'x-rapidapi-host': 'luxand-cloud-face-recognition.p.rapidapi.com',
-      'x-rapidapi-key': `${process.env.REACT_APP_RAPID_KEY}`
+			'x-rapidapi-key': `${process.env.REACT_APP_RAPID_KEY}`
+			
     }, 'params': {
       'photo': imgUrl
     }, 'data': {
