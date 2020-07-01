@@ -23,13 +23,13 @@ class Result extends React.Component {
     try {
       this.setState({ userImage: this.props.location.state.userImage })
       this.shufflePictures()
-      // this.setState({ lookalike:  })
       this.getCelebName()
     } catch (err) {
       console.log(err)
     }
-  }
-  shufflePictures = () => {
+	}
+	
+  shufflePictures = () => { 
     let i = 0
     const shuffle = setInterval(() => {
       if (this.state.lookalike){
@@ -62,7 +62,6 @@ class Result extends React.Component {
     try {
       const celeb = this.state.lookalike
       const res = await getImage(celeb)
-      // console.log(res.data.value[0].thumbnailUrl)
       this.setState({ celebImage: res.data.value[0].thumbnailUrl })
     } catch (err) {
       console.log(err.response)
@@ -76,8 +75,6 @@ class Result extends React.Component {
   }
 
   render() {
-    // console.log('state', this.state)
-
     if (!this.state.userImage) return null
     return (
       <>

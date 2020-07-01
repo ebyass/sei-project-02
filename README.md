@@ -1,68 +1,109 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project 2: React Hackathon to integrate with third party API
 
-## Available Scripts
+# Brief
 
-In the project directory, you can run:
+Consume at least one public API into a React application to create a fun or useful product . Have several components, at least one classical and one functional. Be deployed online and accessible to the public.
 
-### `yarn start`
+Timeframe: 36 hours
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Technologies used:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* ReactJS
+* Express
+* NodeJS
+* Axios
+* SASS
+* Bulma
+* HTML5
+* CSS
+* JavaScript
 
-### `yarn test`
+# Contributors
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[George Jones](https://github.com/Jompra)
 
-### `yarn build`
+# Deployment 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This website is deployed on Netlify and can be found [here](https://your-celeb-face.netlify.app/)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run this app you will need to clone or download the files and sign up for the two APIs used: 
 
-### `yarn eject`
+[Luxand Cloud](https://rapidapi.com/aboykov/api/luxand-cloud-face-recognition?endpoint=apiendpoint_188c3cc8-6f87-4558-a9c7-be772a5a7ccf) 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Microsoft Azure](https://azure.microsoft.com/en-gb/free/search/?&ef_id=CjwKCAjw2a32BRBXEiwAUcugiISGAMerV2gAqqtH0Va-SKRbGl6PQg7R1nJVHepxe0Jw54XQ_vvbPRoCFH4QAvD_BwE:G:s&OCID=AID2000125_SEM_CjwKCAjw2a32BRBXEiwAUcugiISGAMerV2gAqqtH0Va-SKRbGl6PQg7R1nJVHepxe0Jw54XQ_vvbPRoCFH4QAvD_BwE:G:s&dclid=CjkKEQjw2a32BRCwkfevsaHM07IBEiQAOHSxZRMAtT9DP8wOMrB3t3Ey1nc54XpMnbMwqVuQT1vdQjnw_wcB)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ Add the keys to a `.env` file, making sure they look like the below example
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+REACT_APP_AZURE_KEY = Azure API Key
+REACT_APP_RAPID_KEY = Rapid API Key
+```
 
-## Learn More
+Then run 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`$ npm i `
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+or
 
-### Code Splitting
+`$ yarn install `
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+to start 
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# Project 
 
-### Making a Progressive Web App
+This fun, quick and easy to use website is made up of a homepage and a results page.  As a pair we wanted to build something that could be enjoyed by everyone. Our final product was a celebrity generator where users can upload an image URL of themselves and see who their celebrity lookalike is. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+# Screenshot walk through 
 
-### Advanced Configuration
+The homepage where users can upload a URL image into the generator bar.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
+![Homepage](src/images/1.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+The results page displays the user’s image plus their celebrity lookalike’s name and image.
 
-### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Results page](src/images/2.png)
+
+
+# Wins and Blockers 
+
+I was really happy with our idea to use the Luxand Cloud Celebrity Recognition API. Originally designed for journalists to pick out known celebrities from photographs we were able to use this to our advantage as even if the image used was not a known celebrity, the API still returns the closest match.
+
+A real win was deciding to integrate with the Microsoft Azure Cloud Bing Image Search API. We felt it was better for the user experience to see the celebrity image as well as a name and Bing was by far the most reliable API when searching less well known celebrities in the search term. 
+
+
+This was my first project pair coding and I really enjoyed working with someone else as a team. We both brought different strengths to the project and I learnt a lot in a short amount of time. Our communication was clear and efficient which meant we were able to build a really successful app that was in-line with our original brief. 
+
+
+I was really happy with our shuffle card feature in the results page. Designed to add a bit of suspense to the user experience, we created a loading effect that I think worked nicely. 
+
+
+```
+  shufflePictures = () => { 
+    let i = 0
+    const shuffle = setInterval(() => {
+      /if/ (*this*.state.lookalike){
+        clearInterval(shuffle)
+        /return/
+      } 
+      *this*.setState({ celebImage: *this*.state.stockImages[i] })
+      /if/ (i === *this*.state.stockImages.length - 1){
+        i = 0
+      } /else/ {
+        i++
+      }
+    }, 300)
+  }
+```
+
+# Future Features 
+
+With more time I would have liked to give users the ability to upload an image of themselves instead of a URL. 
+I would also like to the make the design responsive.  
+
+
