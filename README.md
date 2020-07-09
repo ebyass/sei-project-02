@@ -4,7 +4,9 @@
 
 Consume at least one public API into a React application to create a fun or useful product . Have several components, at least one classical and one functional. Be deployed online and accessible to the public.
 
-Timeframe: 36 hours
+# Timeframe: 
+
+36 hours
 
 # Technologies used:
 
@@ -57,6 +59,14 @@ to start
 
 This fun, quick and easy to use website is made up of a homepage and a results page.  As a pair we wanted to build something that could be enjoyed by everyone. Our final product was a celebrity generator where users can upload an image URL of themselves and see who their celebrity lookalike is. 
 
+# Build 
+
+With only a day and a half and such a creative brief our biggest challenge was discovering and agreeing on a third party API to use. We were very excited to discover the Luxand Cloud Face Recognition API as it had a lot of potential that was not immediately obvious and we felt this was something we could use to create something quite unique. 
+
+A quick wireframe and walkthrough of the app was next and then we went straight into the build. I set up the different components for the app and designed the look and feel of the site whilst my partner focused on the documentation and set up required for integration. 
+
+Once fully integrated we then worked together smoothing out small bugs. For example, we had a problem in the results component with the celebrity lookalike image being generated a lot faster thant the celebrity name. We wanted this to appear synchronous so implemented a setInterval work around that created the illusion of shuffling through other celebrities in the database before landing on the users. 
+
 # Screenshot walk through 
 
 The homepage where users can upload a URL image into the generator bar.
@@ -100,6 +110,17 @@ I was really happy with our shuffle card feature in the results page. Designed t
     }, 300)
   }
 ```
+
+# Key Learnings
+
+I believe we were able to create a successful app in such a small amount of time due to our simple design structure. We were strict with each other no not create a project could get away from us. This calm and structured approach helped us achieve MVP within the 36 hour deadline and allow time for styling. 
+
+This was my first project using Bulma and a great framework. It was quick to understand and implement and created something eye catching and attention grabbing quickly. 
+
+# Bugs 
+
+I would like to focus on the shuffle card functionality some more as it is a bit jumpy and image quality could be improved. 
+
 
 # Future Features 
 
