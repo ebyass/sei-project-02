@@ -12,7 +12,6 @@ Consume at least one public API into a React application to create a fun or usef
 
 * ReactJS
 * Express
-* NodeJS
 * Axios
 * SASS
 * Bulma
